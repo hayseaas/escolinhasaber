@@ -1,0 +1,284 @@
+/* Importação das fontes */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #444;
+    line-height: 1.75;
+}
+
+
+/* Cabeçalho */
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+
+/* Navegação */
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    background: #43a047;
+    padding: 15px;
+}
+
+nav a {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: #2e7d32;
+}
+
+
+/* Banner */
+
+.banner {
+    background: #f0f4f3;
+    color: #2e7d32;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 1.6em;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Seções */
+
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+
+/* Cards e Grids */
+
+.courses,
+.gallery,
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    max-width: 280px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 15px 0 10px;
+    font-size: 1.2em;
+    color: #2e7d32;
+}
+
+.card p {
+    font-weight: 300;
+    font-size: 0.95em;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* Galeria e vídeos */
+
+.gallery img,
+.videos video {
+    width: 100%;
+    max-width: 260px;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+    cursor: pointer;
+    transform-origin: center center;
+}
+
+.gallery img:hover,
+.videos video:hover {
+    transform: scale(1.05);
+}
+
+
+/* Rodapé */
+
+footer {
+    background-color: #2e7d32;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer a {
+    color: #c8e6c9;
+    text-decoration: underline;
+}
+
+
+/* Modal de matrícula */
+
+#modalMatricula {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+#modalMatricula .modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 90%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+#modalMatricula h2 {
+    font-size: 1.8em;
+    color: #388e3c;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#modalMatricula a,
+#modalMatricula button {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #2e7d32;
+    color: white;
+    font-weight: 500;
+    font-size: 0.95em;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#modalMatricula a:hover,
+#modalMatricula button:hover {
+    background-color: #1b5e20;
+}
+
+
+/* Modal de Imagem Expandida */
+
+#imageModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+#imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.closeBtn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/* Responsividade */
+
+@media screen and (max-width: 600px) {
+    .courses,
+    .gallery,
+    .videos {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner {
+        font-size: 1.4em;
+        padding: 30px 10px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #imageModal img {
+        max-width: 95%;
+        max-height: 75%;
+    }
+    .closeBtn {
+        top: 20px;
+        right: 20px;
+        font-size: 32px;
+    }
+}

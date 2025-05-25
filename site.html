@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reforço Escolar Infantil</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #fffdf6;
+            color: #333;
+        }
+        
+        #modalMatricula {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        #modalMatricula .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 90%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
+        #modalMatricula h2 {
+            color: #4CAF50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        
+        #modalMatricula a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #4CAF50;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        #modalMatricula a:hover,
+        #modalMatricula a:active {
+            transform: scale(1.05) rotate(1deg);
+        }
+        
+        #modalMatricula button {
+            background: #4CAF50;
+            color: white;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        #modalMatricula button:hover {
+            transform: scale(1.05) rotate(1deg);
+            background-color: #e53935;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background: #66bb6a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 10px 0;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .banner {
+            background: url('https://images.unsplash.com/photo-1588072432836-e10032774350') center/cover no-repeat;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            padding: 0 20px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .card {
+            background: #e8f5e9;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 280px;
+            padding: 20px;
+        }
+        
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .gallery,
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .gallery img,
+        .videos video {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            transition: transform 0.4s ease;
+            cursor: pointer;
+        }
+        
+        .gallery img:hover,
+        .videos video:hover {
+            transform: scale(1.1) rotate(1deg);
+        }
+        
+        footer {
+            background: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            .banner {
+                font-size: 1.5em;
+                height: 200px;
+            }
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="modalMatricula">
+        <div class="modal-content">
+            <h2>Faça sua matrícula já!</h2>
+            <a href="https://wa.me/5563981317474" target="_blank">Contate-nos</a><br>
+            <button onclick="document.getElementById('modalMatricula').style.display='none'">Fechar</button>
+        </div>
+    </div>
+
+    <header>
+        <h1>Reforço Escolar Infantil</h1>
+        <p style="font-family: 'Roboto', sans-serif;">Aprender com carinho!</p>
+    </header>
+
+    <nav>
+        <a href="#atividades">Atividades</a>
+        <a href="#fotos">Fotos</a>
+        <a href="#videos">Vídeos</a>
+    </nav>
+
+    <div class="banner">
+        <p>Desenvolvendo habilidades com diversão e aprendizado!</p>
+    </div>
+
+    <section class="section" id="atividades">
+        <h2>Atividades Educacionais</h2>
+        <div class="courses">
+            <div class="card">
+                <img src="matematica.png" alt="Matemática">
+                <h3>Matemática Divertida</h3>
+                <p>Contagem, lógica e resolução de problemas.</p>
+            </div>
+            <div class="card">
+                <img src="leitura.png" alt="Leitura">
+                <h3>Leitura e Escrita</h3>
+                <p>Histórias, letras, fonemas e produção de texto.</p>
+            </div>
+            <div class="card">
+                <img src="neuro.png" alt="Neurodivergentes">
+                <h3>Aprendizado Personalizado</h3>
+                <p>Exploração criativa com apoio individualizado.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="fotos">
+        <h2>Galeria de Fotos</h2>
+        <div class="gallery">
+            <img src="estudando1.png" alt="Estudo 1">
+            <img src="estudando3.png" alt="Estudo 3">
+            <img src="estudando2.png" alt="Estudo 2">
+        </div>
+    </section>
+
+    <section class="section" id="videos">
+        <h2>Vídeos em Sala</h2>
+        <div class="videos">
+            <video controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+            <video controls>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Reforço Escolar Infantil. Professora Elza.</p>
+        <p>Contato: <a href="https://wa.me/5563981317474">+55 (63) 98131-7474</a></p>
+    </footer>
+
+    <script>
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('modalMatricula');
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
